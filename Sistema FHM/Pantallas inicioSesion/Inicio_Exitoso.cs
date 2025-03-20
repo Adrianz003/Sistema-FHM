@@ -12,11 +12,17 @@ namespace Sistema_FHM.Pantallas_Menu
 {
     public partial class Inicio_Exitoso: Form
     {
+        private Timer timer;
+        private int xDirection = 5;
+        private int yDirection = 5;
         public Inicio_Exitoso()
         {
             InitializeComponent();
         }
 
-       
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
