@@ -48,8 +48,13 @@ namespace Sistema_FHM
             MySqlDataReader reader = cmd.ExecuteReader();
             if(reader.Read())
             {
+                if (inicio_Exitoso == null || inicio_Exitoso.IsDisposed)
+                {
+                    inicio_Exitoso = new Inicio_Exitoso();
+                }
                 inicio_Exitoso.Show();
                 this.Hide();
+
             }
             else
             {
