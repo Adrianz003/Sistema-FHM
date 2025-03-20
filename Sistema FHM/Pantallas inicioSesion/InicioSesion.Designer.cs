@@ -65,7 +65,7 @@
             this.boton_Salir.TabIndex = 2;
             this.boton_Salir.Text = "Salir";
             this.boton_Salir.UseVisualStyleBackColor = false;
-            this.boton_Salir.Click += new System.EventHandler(this.button1_Click);
+            this.boton_Salir.Click += new System.EventHandler(this.boton_Salir_Click);
             // 
             // text1
             // 

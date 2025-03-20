@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sistema_FHM.MenuPrincipal.Gestion_Empleados
+namespace Sistema_FHM.MenuPrincipal.Gestion_Empleados.AdministrarEmpleados.Modificacion
 {
-    public partial class MenuEmpleados: Form
+    public partial class ModificacionCorrecta: Form
     {
-        public MenuEmpleados()
+        public ModificacionCorrecta()
         {
             InitializeComponent();
-        }
-
-        private void GestionEmpleados_Load(object sender, EventArgs e)
-        {
-
-            
-
         }
     }
 }
