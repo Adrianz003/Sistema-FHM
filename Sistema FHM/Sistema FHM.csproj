@@ -99,6 +99,54 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="MenuPrincipal\Calcular Nomina\Calcular Nomina\GuardarArchivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\Calcular Nomina\Calcular Nomina\GuardarArchivos.Designer.cs">
+      <DependentUpon>GuardarArchivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\Calcular Nomina\Calcular Nomina\NominaCalculada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\Calcular Nomina\Calcular Nomina\NominaCalculada.Designer.cs">
+      <DependentUpon>NominaCalculada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\Calcular Nomina\Calcular Nomina\VistaPrevia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\Calcular Nomina\Calcular Nomina\VistaPrevia.Designer.cs">
+      <DependentUpon>VistaPrevia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\Calcular Nomina\Consultar Nomina\ColsultarNominas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\Calcular Nomina\Consultar Nomina\ColsultarNominas.Designer.cs">
+      <DependentUpon>ColsultarNominas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\Calcular Nomina\Consultar Nomina\VerNominas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\Calcular Nomina\Consultar Nomina\VerNominas.Designer.cs">
+      <DependentUpon>VerNominas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\Calcular Nomina\MenuNominas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\Calcular Nomina\MenuNominas.Designer.cs">
+      <DependentUpon>MenuNominas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\Calcular Nomina\Modificar\ModificarNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\Calcular Nomina\Modificar\ModificarNomina.Designer.cs">
+      <DependentUpon>ModificarNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\Gestion Empleados\AdministrarEmpleados\Busqueda\Busqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\Gestion Empleados\AdministrarEmpleados\Busqueda\Busqueda.Designer.cs">
+      <DependentUpon>Busqueda.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal\Gestion Empleados\AdministrarEmpleados\Eliminar\EliminacionCorrecta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +251,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MenuPrincipal\Calcular Nomina\Calcular Nomina\GuardarArchivos.resx">
+      <DependentUpon>GuardarArchivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\Calcular Nomina\Calcular Nomina\NominaCalculada.resx">
+      <DependentUpon>NominaCalculada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\Calcular Nomina\Calcular Nomina\VistaPrevia.resx">
+      <DependentUpon>VistaPrevia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\Calcular Nomina\Consultar Nomina\ColsultarNominas.resx">
+      <DependentUpon>ColsultarNominas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\Calcular Nomina\Consultar Nomina\VerNominas.resx">
+      <DependentUpon>VerNominas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\Calcular Nomina\MenuNominas.resx">
+      <DependentUpon>MenuNominas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\Calcular Nomina\Modificar\ModificarNomina.resx">
+      <DependentUpon>ModificarNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\Gestion Empleados\AdministrarEmpleados\Busqueda\Busqueda.resx">
+      <DependentUpon>Busqueda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal\Gestion Empleados\AdministrarEmpleados\Eliminar\EliminacionCorrecta.resx">
       <DependentUpon>EliminacionCorrecta.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,10 +353,7 @@
   <ItemGroup>
     <None Include="Resources\MORELIA.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MenuPrincipal\Calcular nomina\" />
-    <Folder Include="MenuPrincipal\Gestion Empleados\AdministrarEmpleados\Busqueda\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\ZC9Y.gif" />
   </ItemGroup>
@@ -305,6 +374,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\empleados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nominas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

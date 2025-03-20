@@ -103,6 +103,16 @@ namespace Sistema_FHM.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nominas {
+            get {
+                object obj = ResourceManager.GetObject("nominas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PDF_file_icon_svg {
             get {
                 object obj = ResourceManager.GetObject("PDF_file_icon.svg", resourceCulture);
