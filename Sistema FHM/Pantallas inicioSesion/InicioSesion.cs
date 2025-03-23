@@ -1,23 +1,17 @@
 ﻿using Sistema_FHM.MenuPrincipal;
-using Sistema_FHM.MenuPrincipal.Gestion_Empleados;
 using Sistema_FHM.Pantallas_Menu;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using System.Data.SqlClient;
-using System.Drawing.Text;
+using Menu = Sistema_FHM.MenuPrincipal.Menu;
+
+
 namespace Sistema_FHM
 {
     public partial class InicioSesion : Form
     {
-        private Conexion mConexion; Error_InicioSesion error_InicioSesion = new Error_InicioSesion(); Inicio_Exitoso inicio_Exitoso = new Inicio_Exitoso();
+        private Error_InicioSesion error_InicioSesion = new Error_InicioSesion(); Inicio_Exitoso inicio_Exitoso = new Inicio_Exitoso(); Menu menu;
+ 
         public InicioSesion()
         {
             InitializeComponent();
@@ -34,7 +28,7 @@ namespace Sistema_FHM
             string usuario = UsuarioBox.Text;
             string contraseña = ContraseñaBox.Text;
 
-            MySqlConnection con = new MySqlConnection("server= localhost; Database=heladosmorelia; user = root; password = root "); 
+            MySqlConnection con = new MySqlConnection("server= localhost; Database=heladosmorelia; user = root; password = root ");
             try
             {
                 con.Open();
@@ -43,25 +37,32 @@ namespace Sistema_FHM
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+
             String sql = "SELECT user, password FROM usuarios WHERE user = '" + usuario + "' AND password = '" + contraseña + "'";
             MySqlCommand cmd = new MySqlCommand(sql, con);
             MySqlDataReader reader = cmd.ExecuteReader();
-            if(reader.Read())
+
+            if (reader.Read())
             {
                 if (inicio_Exitoso == null || inicio_Exitoso.IsDisposed)
                 {
                     inicio_Exitoso = new Inicio_Exitoso();
                 }
                 inicio_Exitoso.Show();
-                this.Hide();
 
+                if (menu == null || menu.IsDisposed)
+                {
+                    menu = new Menu(this); // Pasamos el formulario actual como referencia
+                }
+                menu.Show();
+                this.Hide(); // Oculta InicioSesion pero no lo cierra.
             }
             else
             {
                 error_InicioSesion.Show();
-                //this.Hide();
             }
         }
+
 
 
 

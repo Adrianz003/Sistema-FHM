@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Btn_GestionEmp = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
+            this.BtnGestionEmp = new System.Windows.Forms.Button();
             this.Btn_Reportes = new System.Windows.Forms.Button();
             this.Btn_CNomina = new System.Windows.Forms.Button();
             this.Btn_CerrarSesion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Btn_GestionEmp
+            // BtnGestionEmp
             // 
-            this.Btn_GestionEmp.BackColor = System.Drawing.Color.LightCoral;
-            this.Btn_GestionEmp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_GestionEmp.ForeColor = System.Drawing.Color.Black;
-            this.Btn_GestionEmp.Location = new System.Drawing.Point(78, 224);
-            this.Btn_GestionEmp.Name = "Btn_GestionEmp";
-            this.Btn_GestionEmp.Size = new System.Drawing.Size(163, 66);
-            this.Btn_GestionEmp.TabIndex = 0;
-            this.Btn_GestionEmp.Text = "Gestion de Empleados";
-            this.Btn_GestionEmp.UseVisualStyleBackColor = false;
-            this.Btn_GestionEmp.Click += new System.EventHandler(this.button1_Click);
+            this.BtnGestionEmp.BackColor = System.Drawing.Color.LightCoral;
+            this.BtnGestionEmp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGestionEmp.ForeColor = System.Drawing.Color.Black;
+            this.BtnGestionEmp.Location = new System.Drawing.Point(78, 224);
+            this.BtnGestionEmp.Name = "BtnGestionEmp";
+            this.BtnGestionEmp.Size = new System.Drawing.Size(163, 66);
+            this.BtnGestionEmp.TabIndex = 0;
+            this.BtnGestionEmp.Text = "Gestion de Empleados";
+            this.BtnGestionEmp.UseVisualStyleBackColor = false;
+            this.BtnGestionEmp.Click += new System.EventHandler(this.button1_Click);
             // 
             // Btn_Reportes
             // 
@@ -82,6 +83,7 @@
             this.Btn_CerrarSesion.TabIndex = 3;
             this.Btn_CerrarSesion.Text = "Cerrar Sesion";
             this.Btn_CerrarSesion.UseVisualStyleBackColor = false;
+            this.Btn_CerrarSesion.Click += new System.EventHandler(this.Btn_CerrarSesion_Click);
             // 
             // Menu
             // 
@@ -93,12 +95,13 @@
             this.Controls.Add(this.Btn_CerrarSesion);
             this.Controls.Add(this.Btn_CNomina);
             this.Controls.Add(this.Btn_Reportes);
-            this.Controls.Add(this.Btn_GestionEmp);
+            this.Controls.Add(this.BtnGestionEmp);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Menu_Load);
             this.ResumeLayout(false);
 
@@ -106,7 +109,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Btn_GestionEmp;
+        private System.Windows.Forms.Button BtnGestionEmp;
         private System.Windows.Forms.Button Btn_Reportes;
         private System.Windows.Forms.Button Btn_CNomina;
         private System.Windows.Forms.Button Btn_CerrarSesion;
