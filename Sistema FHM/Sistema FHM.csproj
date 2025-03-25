@@ -99,6 +99,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="ConexionMysql.cs" />
+    <Compile Include="Empleado.cs" />
+    <Compile Include="EmpleadoConsultas.cs" />
     <Compile Include="MenuPrincipal\Calcular Nomina\Calcular Nomina\GuardarArchivos.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -46,7 +46,7 @@
             this.BtnGestionEmp.TabIndex = 0;
             this.BtnGestionEmp.Text = "Gestion de Empleados";
             this.BtnGestionEmp.UseVisualStyleBackColor = false;
-            this.BtnGestionEmp.Click += new System.EventHandler(this.button1_Click);
+            this.BtnGestionEmp.Click += new System.EventHandler(this.BtnGestionEmp_Click);
             // 
             // Btn_Reportes
             // 

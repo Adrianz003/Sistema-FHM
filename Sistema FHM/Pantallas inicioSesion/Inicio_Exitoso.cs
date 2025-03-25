@@ -17,13 +17,13 @@ namespace Sistema_FHM.Pantallas_Menu
         public Inicio_Exitoso()
         {
             InitializeComponent();
-            InitializeTimer();
+            //InitializeTimer();
         }
 
-        private void InitializeTimer()
+        public void StartTimer()
         {
             timer = new Timer();
-            timer.Interval = 1500; // Tiempo en milisegundos (5000 ms = 5 segundos)
+            timer.Interval = 5000; // Tiempo en milisegundos (5000 ms = 5 segundos)
             timer.Tick += new EventHandler(Timer_Tick);
             timer.Start();
         }
@@ -32,17 +32,9 @@ namespace Sistema_FHM.Pantallas_Menu
         {
             // Detiene el timer y cierra el formulario
             timer.Stop();
+            MessageBox.Show("El formulario se cerrará ahora.");
             this.Close();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

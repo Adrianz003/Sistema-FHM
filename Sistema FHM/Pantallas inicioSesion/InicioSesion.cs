@@ -49,6 +49,7 @@ namespace Sistema_FHM
                     inicio_Exitoso = new Inicio_Exitoso();
                 }
                 inicio_Exitoso.Show();
+                inicio_Exitoso.StartTimer();
 
                 if (menu == null || menu.IsDisposed)
                 {
@@ -59,6 +60,10 @@ namespace Sistema_FHM
             }
             else
             {
+                if (error_InicioSesion == null || error_InicioSesion.IsDisposed)
+                {
+                    error_InicioSesion = new Error_InicioSesion();
+                }
                 error_InicioSesion.Show();
             }
         }
