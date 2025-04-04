@@ -67,7 +67,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Inicio_Exitoso";
-            this.Opacity = 0.6D;
+            this.Opacity = 0.95D;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio_Exitoso";
             this.ResumeLayout(false);

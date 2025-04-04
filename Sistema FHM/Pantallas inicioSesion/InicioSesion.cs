@@ -10,6 +10,7 @@ namespace Sistema_FHM
 {
     public partial class InicioSesion : Form
     {
+        //private Timer timer;
         private Error_InicioSesion error_InicioSesion = new Error_InicioSesion(); Inicio_Exitoso inicio_Exitoso = new Inicio_Exitoso(); Menu menu;
  
         public InicioSesion()
@@ -49,14 +50,23 @@ namespace Sistema_FHM
                     inicio_Exitoso = new Inicio_Exitoso();
                 }
                 inicio_Exitoso.Show();
-                inicio_Exitoso.StartTimer();
 
-                if (menu == null || menu.IsDisposed)
+                // Configurar temporizador para abrir el menú después de un tiempo
+                Timer timerMenu = new Timer();
+                timerMenu.Interval = 3000; // 5 segundos
+                timerMenu.Tick += (s, ev) =>
                 {
-                    menu = new Menu(this); // Pasamos el formulario actual como referencia
-                }
-                menu.Show();
-                this.Hide(); // Oculta InicioSesion pero no lo cierra.
+                    timerMenu.Stop();
+
+                    if (menu == null || menu.IsDisposed)
+                    {
+                        menu = new Menu(this);
+                    }
+                    menu.Show();
+                    this.Hide();
+                    inicio_Exitoso.Close();
+                };
+                timerMenu.Start();
             }
             else
             {
@@ -67,9 +77,6 @@ namespace Sistema_FHM
                 error_InicioSesion.Show();
             }
         }
-
-
-
 
         private void botonSalir_Click(object sender, EventArgs e)
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_FHM
 {
-    class Empleado
+    public class Empleado
     {
         public int Id { get; set; }
         public int IdRol { get; set; }
@@ -17,5 +17,8 @@ namespace Sistema_FHM
         public long Tarjeta { get; set; }
         public float SueldoBase { get; set; }
         public string Rol { get; set; }
+        public string Estado { get; set; }
+        public string Horario { get; set; }
+        public string Contraseña { get; set; }
     }
 }

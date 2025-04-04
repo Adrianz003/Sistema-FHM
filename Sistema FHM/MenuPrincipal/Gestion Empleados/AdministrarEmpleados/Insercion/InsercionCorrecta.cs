@@ -16,5 +16,17 @@ namespace Sistema_FHM.MenuPrincipal.Gestion_Empleados.AdministrarEmpleados.Inser
         {
             InitializeComponent();
         }
+
+        public InsercionCorrecta(int idEmpleado, string nombreEmpleado)
+        {
+            InitializeComponent();
+            //lblIdEmpleado.Text = "ID: " + idEmpleado;
+            lblNombreEmpleado.Text = "Nombre del empleado: " + nombreEmpleado;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

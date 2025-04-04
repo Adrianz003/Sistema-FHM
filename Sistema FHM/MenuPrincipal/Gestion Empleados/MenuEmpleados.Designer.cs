@@ -67,6 +67,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Gestion";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // salir
             // 
@@ -79,7 +80,7 @@
             this.salir.TabIndex = 2;
             this.salir.Text = "Salir";
             this.salir.UseVisualStyleBackColor = false;
-            this.salir.Click += new System.EventHandler(this.button2_Click);
+            this.salir.Click += new System.EventHandler(this.salir_Click);
             // 
             // registroAsistencia
             // 
@@ -118,7 +119,7 @@
             this.idEmpleados.HeaderText = "ID Empleado";
             this.idEmpleados.MinimumWidth = 6;
             this.idEmpleados.Name = "idEmpleados";
-            this.idEmpleados.Width = 125;
+            this.idEmpleados.Width = 75;
             // 
             // IdRol
             // 
@@ -146,35 +147,35 @@
             this.rfc.HeaderText = "RFC";
             this.rfc.MinimumWidth = 6;
             this.rfc.Name = "rfc";
-            this.rfc.Width = 125;
+            this.rfc.Width = 80;
             // 
             // telefono
             // 
             this.telefono.HeaderText = "Telefono";
             this.telefono.MinimumWidth = 6;
             this.telefono.Name = "telefono";
-            this.telefono.Width = 125;
+            this.telefono.Width = 80;
             // 
             // tarjeta
             // 
             this.tarjeta.HeaderText = "Tarjeta";
             this.tarjeta.MinimumWidth = 6;
             this.tarjeta.Name = "tarjeta";
-            this.tarjeta.Width = 125;
+            this.tarjeta.Width = 80;
             // 
             // sueldoBase
             // 
             this.sueldoBase.HeaderText = "Sueldo Base";
             this.sueldoBase.MinimumWidth = 6;
             this.sueldoBase.Name = "sueldoBase";
-            this.sueldoBase.Width = 125;
+            this.sueldoBase.Width = 80;
             // 
             // rol
             // 
             this.rol.HeaderText = "Rol";
             this.rol.MinimumWidth = 6;
             this.rol.Name = "rol";
-            this.rol.Width = 125;
+            this.rol.Width = 80;
             // 
             // MenuEmpleados
             // 
@@ -192,6 +193,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuEmpleados";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "+";
             this.Load += new System.EventHandler(this.GestionEmpleados_Load);

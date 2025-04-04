@@ -98,6 +98,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asistencia.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="ConexionMysql.cs" />
     <Compile Include="Empleado.cs" />
@@ -144,11 +145,11 @@
     <Compile Include="MenuPrincipal\Calcular Nomina\Modificar\ModificarNomina.Designer.cs">
       <DependentUpon>ModificarNomina.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuPrincipal\Gestion Empleados\AdministrarEmpleados\Busqueda\Busqueda.cs">
+    <Compile Include="MenuPrincipal\Gestion Empleados\AdministrarEmpleados\Busqueda\BusquedaEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuPrincipal\Gestion Empleados\AdministrarEmpleados\Busqueda\Busqueda.Designer.cs">
-      <DependentUpon>Busqueda.cs</DependentUpon>
+    <Compile Include="MenuPrincipal\Gestion Empleados\AdministrarEmpleados\Busqueda\BusquedaEmpleados.Designer.cs">
+      <DependentUpon>BusquedaEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal\Gestion Empleados\AdministrarEmpleados\Eliminar\EliminacionCorrecta.cs">
       <SubType>Form</SubType>
@@ -275,8 +276,8 @@
     <EmbeddedResource Include="MenuPrincipal\Calcular Nomina\Modificar\ModificarNomina.resx">
       <DependentUpon>ModificarNomina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuPrincipal\Gestion Empleados\AdministrarEmpleados\Busqueda\Busqueda.resx">
-      <DependentUpon>Busqueda.cs</DependentUpon>
+    <EmbeddedResource Include="MenuPrincipal\Gestion Empleados\AdministrarEmpleados\Busqueda\BusquedaEmpleados.resx">
+      <DependentUpon>BusquedaEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal\Gestion Empleados\AdministrarEmpleados\Eliminar\EliminacionCorrecta.resx">
       <DependentUpon>EliminacionCorrecta.cs</DependentUpon>

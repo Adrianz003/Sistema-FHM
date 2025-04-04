@@ -12,9 +12,16 @@ namespace Sistema_FHM.MenuPrincipal.Gestion_Empleados.AdministrarEmpleados.Modif
 {
     public partial class ModificacionCorrecta: Form
     {
-        public ModificacionCorrecta()
+        public ModificacionCorrecta(string empleadoInfo, string modificaciones)
         {
             InitializeComponent();
+            lblEmpleadoInfo.Text = empleadoInfo;
+            lblModificaciones.Text = modificaciones;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

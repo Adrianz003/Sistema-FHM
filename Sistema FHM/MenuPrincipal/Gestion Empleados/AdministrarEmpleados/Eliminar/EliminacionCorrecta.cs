@@ -16,5 +16,10 @@ namespace Sistema_FHM.MenuPrincipal.Gestion_Empleados.AdministrarEmpleados.Elimi
         {
             InitializeComponent();
         }
+
+        private void Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
