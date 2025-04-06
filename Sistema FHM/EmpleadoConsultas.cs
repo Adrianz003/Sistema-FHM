@@ -222,31 +222,28 @@ namespace Sistema_FHM
             }
         }
 
-        internal static bool buscarEmpleado(Empleado mEmpleado)
+        internal List<Empleado> buscarEmpleado(string filtro)
         {
-            string QUERY = "SELECT * FROM empleados WHERE idEmpleado = @idEmpleado ";
+            string QUERY = "SELECT * FROM empleados ";
             MySqlDataReader mReader = null;
-            List<Empleado> mEmpleados = new List<Empleado>(); // Moved the declaration here
+            List<Empleado> mEmpleados = new List<Empleado>();
 
             try
             {
-                if (filtro != "")
+                if (!string.IsNullOrEmpty(filtro))
                 {
-                    QUERY += "WHERE Empleados_idEmpleados LIKE '%" + filtro +
-                        "%' OR nombre LIKE '%" + filtro +
-                        "%' OR apellido LIKE '%" + filtro;
+                    QUERY += "WHERE idEmpleados LIKE @filtro OR nombre LIKE @filtro OR apellido LIKE @filtro";
                 }
 
-                MySqlCommand mComando = new MySqlCommand(QUERY);
-                using (var connection = new ConexionMysql().GetConnection()) // Use a new connection instance
+                using (var connection = new ConexionMysql().GetConnection())
                 {
-                    mComando.Connection = connection;
+                    MySqlCommand mComando = new MySqlCommand(QUERY, connection);
+                    mComando.Parameters.Add(new MySqlParameter("@filtro", "%" + filtro + "%"));
                     mReader = mComando.ExecuteReader();
 
-                    Empleado mEmpleado = null;
                     while (mReader.Read())
                     {
-                        mEmpleado = new Empleado();
+                        Empleado mEmpleado = new Empleado();
                         mEmpleado.Id = mReader.GetInt16("idEmpleados");
                         mEmpleado.IdRol = mReader.GetInt16("Rol_idRol");
                         mEmpleado.Nombre = mReader.GetString("nombre");
@@ -264,11 +261,12 @@ namespace Sistema_FHM
                     mReader.Close();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception("Error al buscar empleados: " + ex.Message);
             }
             return mEmpleados;
         }
+
     }
 }

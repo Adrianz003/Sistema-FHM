@@ -186,6 +186,10 @@ namespace Sistema_FHM.MenuPrincipal.Gestion_Empleados.AdministrarEmpleados
 
         private void Buscar_Click(object sender, EventArgs e)
         {
+            if(busqueda == null || busqueda.IsDisposed)
+            {
+                busqueda = new BusquedaEmpleados();
+            }
             busqueda.Show();
         }
     }
