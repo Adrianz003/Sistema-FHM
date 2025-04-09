@@ -70,9 +70,20 @@ namespace Sistema_FHM.MenuPrincipal.Gestion_Empleados
 
         private void registroAsistencia_Click(object sender, EventArgs e)
         {
+            if (asistencia == null || asistencia.IsDisposed)
+            {
+                asistencia = new RegistroAsistencia();
+                asistencia.FormClosed += new FormClosedEventHandler(RegistroAsistencia_FormClosed);
+            }
             asistencia.Show();
             this.Hide();
         }
+
+        private void RegistroAsistencia_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {

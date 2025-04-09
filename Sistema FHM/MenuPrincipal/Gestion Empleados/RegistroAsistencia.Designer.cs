@@ -30,13 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cargarAsistencia = new System.Windows.Forms.DataGridView();
+            this.dgvAsistencia = new System.Windows.Forms.DataGridView();
             this.salir = new System.Windows.Forms.Button();
             this.idEmpleados = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.asistencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horasTrabajadas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.cargarAsistencia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsistencia)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -56,32 +55,32 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(467, 16);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(180, 24);
+            this.comboBox1.Size = new System.Drawing.Size(216, 24);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // cargarAsistencia
+            // dgvAsistencia
             // 
-            this.cargarAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cargarAsistencia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAsistencia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idEmpleados,
             this.nombre,
-            this.asistencia,
-            this.horasTrabajadas});
-            this.cargarAsistencia.Location = new System.Drawing.Point(13, 60);
-            this.cargarAsistencia.Name = "cargarAsistencia";
-            this.cargarAsistencia.RowHeadersWidth = 51;
-            this.cargarAsistencia.RowTemplate.Height = 24;
-            this.cargarAsistencia.Size = new System.Drawing.Size(670, 281);
-            this.cargarAsistencia.TabIndex = 2;
+            this.asistencia});
+            this.dgvAsistencia.Location = new System.Drawing.Point(13, 60);
+            this.dgvAsistencia.Name = "dgvAsistencia";
+            this.dgvAsistencia.RowHeadersWidth = 51;
+            this.dgvAsistencia.RowTemplate.Height = 24;
+            this.dgvAsistencia.Size = new System.Drawing.Size(670, 281);
+            this.dgvAsistencia.TabIndex = 2;
             // 
             // salir
             // 
             this.salir.BackColor = System.Drawing.Color.Firebrick;
             this.salir.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salir.ForeColor = System.Drawing.SystemColors.Window;
-            this.salir.Location = new System.Drawing.Point(13, 16);
+            this.salir.Location = new System.Drawing.Point(12, 8);
             this.salir.Name = "salir";
-            this.salir.Size = new System.Drawing.Size(91, 24);
+            this.salir.Size = new System.Drawing.Size(91, 38);
             this.salir.TabIndex = 3;
             this.salir.Text = "Salir";
             this.salir.UseVisualStyleBackColor = false;
@@ -92,14 +91,14 @@
             this.idEmpleados.HeaderText = "Id Empleado";
             this.idEmpleados.MinimumWidth = 6;
             this.idEmpleados.Name = "idEmpleados";
-            this.idEmpleados.Width = 75;
+            this.idEmpleados.Width = 125;
             // 
             // nombre
             // 
             this.nombre.HeaderText = "Nombre";
             this.nombre.MinimumWidth = 6;
             this.nombre.Name = "nombre";
-            this.nombre.Width = 200;
+            this.nombre.Width = 125;
             // 
             // asistencia
             // 
@@ -108,13 +107,6 @@
             this.asistencia.Name = "asistencia";
             this.asistencia.Width = 125;
             // 
-            // horasTrabajadas
-            // 
-            this.horasTrabajadas.HeaderText = "Horas Trabajadas";
-            this.horasTrabajadas.MinimumWidth = 6;
-            this.horasTrabajadas.Name = "horasTrabajadas";
-            this.horasTrabajadas.Width = 125;
-            // 
             // RegistroAsistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -122,15 +114,16 @@
             this.BackColor = System.Drawing.Color.Aquamarine;
             this.ClientSize = new System.Drawing.Size(695, 353);
             this.Controls.Add(this.salir);
-            this.Controls.Add(this.cargarAsistencia);
+            this.Controls.Add(this.dgvAsistencia);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistroAsistencia";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistroAsistencia";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.cargarAsistencia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsistencia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,11 +133,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView cargarAsistencia;
+        private System.Windows.Forms.DataGridView dgvAsistencia;
         private System.Windows.Forms.Button salir;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEmpleados;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn asistencia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn horasTrabajadas;
     }
 }

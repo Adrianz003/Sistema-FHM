@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace Sistema_FHM
 {
-    class Asistencia
+    public class Asistencia
     {
-        public int Id { get; set; }
-        public DateTime Fecha { get; set; }
-        public DateTime Hora { get; set; } 
-        public float HorasTrabajadas { get; set; }
-        public string NombreCompleto { get; set; }
+       /* public class Asistencia
+        {
+            public int IdEmpleado { get; set; }
+            public string Nombre { get; set; }
+            public string Fecha { get; set; }
+            public int HorasTrabajadas { get; set; }
+            public bool ConfirmarAsistencia { get; set; }
+            public DateTime Hora { get; set; }
+        }       */
 
     }
+
 }

@@ -188,7 +188,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.BackColor = System.Drawing.Color.Firebrick;
             this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
             this.button1.Location = new System.Drawing.Point(658, 37);
@@ -212,6 +212,8 @@
             this.Controls.Add(this.txtEmpleado);
             this.Controls.Add(this.lblEmpleado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "BusquedaEmpleados";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

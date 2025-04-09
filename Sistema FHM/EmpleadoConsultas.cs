@@ -268,5 +268,35 @@ namespace Sistema_FHM
             return mEmpleados;
         }
 
+        /*public List<Asistencia> obtenerAsistenciaPorFecha(string fecha)
+        {
+            List<Asistencia> asistencias = new List<Asistencia>();
+            string QUERY = "SELECT empleados_idEmpleados, nombreEmpleado, fecha, horasTrabajadas FROM asistencia WHERE fecha = @fecha";
+
+            using (var connection = new ConexionMysql().GetConnection())
+            {
+                MySqlCommand command = new MySqlCommand(QUERY, connection);
+                command.Parameters.Add(new MySqlParameter("@fecha", fecha));
+
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Asistencia asistencia = new Asistencia
+                        {
+                            IdEmpleado = reader.GetInt32("empleados_idEmpleados"),
+                            Nombre = reader.GetString("nombre"),
+                            //Fecha = reader.GetDateTime("fecha").ToString("dd-MM-yyyy"),
+                            HorasTrabajadas = reader.GetInt32("horasTrabajadas")
+                        };
+                        asistencias.Add(asistencia);
+                    }
+                }
+            }
+
+            return asistencias;
+
+        }*/
+
     }
 }
