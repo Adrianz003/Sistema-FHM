@@ -268,10 +268,10 @@ namespace Sistema_FHM
             return mEmpleados;
         }
 
-        /*public List<Asistencia> obtenerAsistenciaPorFecha(string fecha)
+        public List<Asistencia> obtenerAsistenciaPorFecha(string fecha)
         {
             List<Asistencia> asistencias = new List<Asistencia>();
-            string QUERY = "SELECT empleados_idEmpleados, nombreEmpleado, fecha, horasTrabajadas FROM asistencia WHERE fecha = @fecha";
+            string QUERY = "SELECT empleados_idEmpleados, nombreEmpleado, fecha, horaEntrada, horaSalida FROM asistencias WHERE fecha = @fecha";
 
             using (var connection = new ConexionMysql().GetConnection())
             {
@@ -285,9 +285,11 @@ namespace Sistema_FHM
                         Asistencia asistencia = new Asistencia
                         {
                             IdEmpleado = reader.GetInt32("empleados_idEmpleados"),
-                            Nombre = reader.GetString("nombre"),
-                            //Fecha = reader.GetDateTime("fecha").ToString("dd-MM-yyyy"),
-                            HorasTrabajadas = reader.GetInt32("horasTrabajadas")
+                            Nombre = reader.GetString("nombreEmpleado"),
+                            Fecha = reader.GetDateTime("fecha").ToString("dd-MM-yyyy"),
+                            HoraEntrada = !reader.IsDBNull(reader.GetOrdinal("horaEntrada")) ? reader.GetTimeSpan("horaEntrada") : default(TimeSpan),
+                            HoraSalida = !reader.IsDBNull(reader.GetOrdinal("horaSalida")) ? reader.GetTimeSpan("horaSalida") : default(TimeSpan),
+
                         };
                         asistencias.Add(asistencia);
                     }
@@ -296,7 +298,28 @@ namespace Sistema_FHM
 
             return asistencias;
 
-        }*/
+        }
+
+        public List<string> obtenerFechasDeAsistencias()
+        {
+            List<string> fechas = new List<string>();
+            string QUERY = "SELECT DISTINCT fecha FROM asistencias ORDER BY fecha";
+
+            using (var connection = new ConexionMysql().GetConnection())
+            {
+                MySqlCommand command = new MySqlCommand(QUERY, connection);
+
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        fechas.Add(reader.GetDateTime("fecha").ToString("yyyy-MM-dd"));
+                    }
+                }
+            }
+
+            return fechas;
+        }
 
     }
 }

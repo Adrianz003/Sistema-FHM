@@ -37,7 +37,7 @@
             // 
             this.Btn_ReportEmpleados.BackColor = System.Drawing.Color.Gold;
             this.Btn_ReportEmpleados.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ReportEmpleados.ForeColor = System.Drawing.Color.Peru;
+            this.Btn_ReportEmpleados.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Btn_ReportEmpleados.Location = new System.Drawing.Point(87, 121);
             this.Btn_ReportEmpleados.Name = "Btn_ReportEmpleados";
             this.Btn_ReportEmpleados.Size = new System.Drawing.Size(177, 83);
@@ -50,7 +50,7 @@
             // 
             this.Btn_Rnomina.BackColor = System.Drawing.Color.Aquamarine;
             this.Btn_Rnomina.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Rnomina.ForeColor = System.Drawing.Color.Peru;
+            this.Btn_Rnomina.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Btn_Rnomina.Location = new System.Drawing.Point(427, 121);
             this.Btn_Rnomina.Name = "Btn_Rnomina";
             this.Btn_Rnomina.Size = new System.Drawing.Size(177, 83);

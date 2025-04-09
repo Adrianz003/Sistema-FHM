@@ -32,9 +32,12 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dgvAsistencia = new System.Windows.Forms.DataGridView();
             this.salir = new System.Windows.Forms.Button();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idEmpleados = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.asistencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsistencia)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,9 +66,12 @@
             // 
             this.dgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAsistencia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.fecha,
             this.idEmpleados,
             this.nombre,
-            this.asistencia});
+            this.asistencia,
+            this.horaEntrada,
+            this.horaSalida});
             this.dgvAsistencia.Location = new System.Drawing.Point(13, 60);
             this.dgvAsistencia.Name = "dgvAsistencia";
             this.dgvAsistencia.RowHeadersWidth = 51;
@@ -86,12 +92,18 @@
             this.salir.UseVisualStyleBackColor = false;
             this.salir.Click += new System.EventHandler(this.salir_Click);
             // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.MinimumWidth = 6;
+            this.fecha.Name = "fecha";
+            // 
             // idEmpleados
             // 
             this.idEmpleados.HeaderText = "Id Empleado";
             this.idEmpleados.MinimumWidth = 6;
             this.idEmpleados.Name = "idEmpleados";
-            this.idEmpleados.Width = 125;
+            this.idEmpleados.Width = 75;
             // 
             // nombre
             // 
@@ -105,7 +117,21 @@
             this.asistencia.HeaderText = "Asistencia";
             this.asistencia.MinimumWidth = 6;
             this.asistencia.Name = "asistencia";
-            this.asistencia.Width = 125;
+            this.asistencia.Width = 80;
+            // 
+            // horaEntrada
+            // 
+            this.horaEntrada.HeaderText = "Hora Entrada";
+            this.horaEntrada.MinimumWidth = 6;
+            this.horaEntrada.Name = "horaEntrada";
+            this.horaEntrada.Width = 80;
+            // 
+            // horaSalida
+            // 
+            this.horaSalida.HeaderText = "Hora Salida";
+            this.horaSalida.MinimumWidth = 6;
+            this.horaSalida.Name = "horaSalida";
+            this.horaSalida.Width = 80;
             // 
             // RegistroAsistencia
             // 
@@ -135,8 +161,11 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dgvAsistencia;
         private System.Windows.Forms.Button salir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEmpleados;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn asistencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaEntrada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaSalida;
     }
 }

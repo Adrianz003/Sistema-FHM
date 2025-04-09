@@ -71,6 +71,7 @@
             this.Btn_CNomina.TabIndex = 2;
             this.Btn_CNomina.Text = "Calcular nómina";
             this.Btn_CNomina.UseVisualStyleBackColor = false;
+            this.Btn_CNomina.Click += new System.EventHandler(this.Btn_CNomina_Click);
             // 
             // Btn_CerrarSesion
             // 

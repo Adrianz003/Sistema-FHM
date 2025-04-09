@@ -20,5 +20,10 @@ namespace Sistema_FHM
         public string Estado { get; set; }
         public string Horario { get; set; }
         public string Contraseña { get; set; }
+        public float HorasTrabajadas { get;  set; }
+        public float HorasExtra { get;  set; }
+        public float HorasACumplir { get;  set; }
+        public float PagoPorHora { get;  set; }
+        public float Bonos { get;  set; }
     }
 }

@@ -33,7 +33,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +43,7 @@
             this.horasAcumplir = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pagoPorHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bonos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,9 +61,9 @@
             // 
             this.button1.BackColor = System.Drawing.Color.LightGreen;
             this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(70, 97);
+            this.button1.Location = new System.Drawing.Point(42, 84);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 61);
+            this.button1.Size = new System.Drawing.Size(184, 35);
             this.button1.TabIndex = 1;
             this.button1.Text = "Calcular Nomina";
             this.button1.UseVisualStyleBackColor = false;
@@ -72,9 +72,9 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Firebrick;
             this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(332, 97);
+            this.button2.Location = new System.Drawing.Point(313, 84);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 61);
+            this.button2.Size = new System.Drawing.Size(142, 35);
             this.button2.TabIndex = 2;
             this.button2.Text = "Consultar";
             this.button2.UseVisualStyleBackColor = false;
@@ -83,9 +83,9 @@
             // 
             this.button3.BackColor = System.Drawing.Color.LightCoral;
             this.button3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(560, 97);
+            this.button3.Location = new System.Drawing.Point(568, 84);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 61);
+            this.button3.Size = new System.Drawing.Size(123, 35);
             this.button3.TabIndex = 3;
             this.button3.Text = "Modificar";
             this.button3.UseVisualStyleBackColor = false;
@@ -100,12 +100,13 @@
             this.button4.TabIndex = 4;
             this.button4.Text = "Salir";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // dataGridView1
+            // dgvEmpleados
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvEmpleados.AllowUserToOrderColumns = true;
+            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.nombre,
             this.rol,
@@ -115,12 +116,12 @@
             this.horasAcumplir,
             this.pagoPorHora,
             this.bonos});
-            this.dataGridView1.Location = new System.Drawing.Point(22, 164);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(748, 182);
-            this.dataGridView1.TabIndex = 5;
+            this.dgvEmpleados.Location = new System.Drawing.Point(12, 125);
+            this.dgvEmpleados.Name = "dgvEmpleados";
+            this.dgvEmpleados.RowHeadersWidth = 51;
+            this.dgvEmpleados.RowTemplate.Height = 24;
+            this.dgvEmpleados.Size = new System.Drawing.Size(748, 221);
+            this.dgvEmpleados.TabIndex = 5;
             // 
             // id
             // 
@@ -134,12 +135,14 @@
             this.nombre.HeaderText = "Nombre";
             this.nombre.MinimumWidth = 6;
             this.nombre.Name = "nombre";
+            this.nombre.Width = 125;
             // 
             // rol
             // 
             this.rol.HeaderText = "Rol";
             this.rol.MinimumWidth = 6;
             this.rol.Name = "rol";
+            this.rol.Width = 125;
             // 
             // sueldoBase
             // 
@@ -174,14 +177,14 @@
             this.pagoPorHora.HeaderText = "Pago Por Hora";
             this.pagoPorHora.MinimumWidth = 6;
             this.pagoPorHora.Name = "pagoPorHora";
-            this.pagoPorHora.Width = 80;
+            this.pagoPorHora.Width = 70;
             // 
             // bonos
             // 
             this.bonos.HeaderText = "Bonos";
             this.bonos.MinimumWidth = 6;
             this.bonos.Name = "bonos";
-            this.bonos.Width = 80;
+            this.bonos.Width = 70;
             // 
             // MenuNominas
             // 
@@ -190,7 +193,7 @@
             this.BackgroundImage = global::Sistema_FHM.Properties.Resources.nominas;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(782, 403);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvEmpleados);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -201,7 +204,7 @@
             this.Name = "MenuNominas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuNominas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,7 +217,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvEmpleados;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn rol;
